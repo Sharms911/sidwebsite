@@ -102,8 +102,8 @@
         <h1>Welcome to Sid Sharma's Portfolio</h1>
         <nav>
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="/contact">Contact</a></li> <!-- Use absolute URL for contact page -->
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
             </ul>
         </nav>
     </header>
