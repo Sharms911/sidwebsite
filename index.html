@@ -21,6 +21,18 @@
             align-items: center; /* Center vertically */
             min-height: 100vh; /* Full viewport height */
             text-align: center; /* Center text */
+            position: relative; /* Position relative to accommodate absolute positioning of pseudo-element */
+        }
+
+        /* Add a semi-transparent overlay */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
         }
 
         /* Additional styles... */
@@ -31,7 +43,8 @@
             width: 100%;
             padding: 20px;
             box-sizing: border-box;
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+            background-color: transparent; /* Remove background color */
+            z-index: 1; /* Ensure the header appears above the overlay */
         }
 
         header h1 {
@@ -69,7 +82,8 @@
             padding: 20px;
             box-sizing: border-box;
             text-align: center;
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+            background-color: transparent; /* Remove background color */
+            z-index: 1; /* Ensure the footer appears above the overlay */
         }
 
         footer p {
@@ -81,6 +95,8 @@
         /* Style for the main content */
         section {
             padding: 20px;
+            position: relative; /* Ensure the content appears above the overlay */
+            z-index: 1; /* Ensure the content appears above the overlay */
         }
     </style>
 </head>
