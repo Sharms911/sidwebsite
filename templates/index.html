@@ -6,25 +6,23 @@
     <title>Sid - Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        /* Add your CSS styles here */
         body {
-            background-image: url('https://sharms911.github.io/sidwebsite/static/background.jpg'); /* Path to the background image */
-            background-size: cover; /* Cover the entire viewport */
-            background-position: center; /* Center the background image */
+            background-image: url('https://sharms911.github.io/sidwebsite/static/background.jpg');
+            background-size: cover;
+            background-position: center;
             color: #fff;
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Hide overflow */
+            overflow: hidden;
             display: flex;
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Center vertically */
-            min-height: 100vh; /* Full viewport height */
-            text-align: center; /* Center text */
-            position: relative; /* Position relative to accommodate absolute positioning of pseudo-element */
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            position: relative;
         }
 
-        /* Add a semi-transparent overlay */
         body::before {
             content: "";
             position: absolute;
@@ -32,10 +30,9 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+            background-color: rgba(0, 0, 0, 0.5);
         }
 
-        /* Additional styles... */
         header {
             position: absolute;
             top: 0;
@@ -43,14 +40,14 @@
             width: 100%;
             padding: 20px;
             box-sizing: border-box;
-            background-color: transparent; /* Remove background color */
-            z-index: 1; /* Ensure the header appears above the overlay */
+            background-color: transparent;
+            z-index: 1;
         }
 
         header h1 {
             margin: 0;
             font-size: 28px;
-            color: #fff; /* White text color */
+            color: #fff;
         }
 
         nav ul {
@@ -66,15 +63,14 @@
         nav ul li a {
             color: #fff;
             text-decoration: none;
-            transition: color 0.3s ease; /* Smooth text color transition */
+            transition: color 0.3s ease;
             font-weight: 700;
         }
 
         nav ul li a:hover {
-            color: #ffa500; /* Orange text color on hover */
+            color: #ffa500;
         }
 
-        /* Footer styles */
         footer {
             position: absolute;
             bottom: 0;
@@ -82,8 +78,8 @@
             padding: 20px;
             box-sizing: border-box;
             text-align: center;
-            background-color: transparent; /* Remove background color */
-            z-index: 1; /* Ensure the footer appears above the overlay */
+            background-color: transparent;
+            z-index: 1;
         }
 
         footer p {
@@ -92,11 +88,36 @@
             color: #fff;
         }
 
-        /* Style for the main content */
         section {
             padding: 20px;
-            position: relative; /* Ensure the content appears above the overlay */
-            z-index: 1; /* Ensure the content appears above the overlay */
+            position: relative;
+            z-index: 1;
+        }
+
+        .project {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .project h2 {
+            margin: 0;
+            color: #fff;
+        }
+
+        .project p {
+            color: #ddd;
+        }
+
+        .project a {
+            color: #ffa500;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .project a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -111,10 +132,14 @@
         </nav>
     </header>
 
-    <section id="about">
-        <!-- Your about section content -->
-        <h2>About Me</h2>
-        <p>Hello, I'm Sid, a passionate 16-year-old web developer based in Australia. I love creating interactive and visually appealing websites for individuals and businesses. Whether you need a personal blog, a professional portfolio, or an e-commerce platform, I'm here to bring your ideas to life.</p>
+    <section id="projects">
+        <h2>My Previous Projects</h2>
+        <div class="project">
+            <h2>Weather Website</h2>
+            <p>A website that provides weather information for different locations.</p>
+            <p><a href="URL_TO_WEATHER_WEBSITE" target="_blank">View Project</a></p>
+        </div>
+        <!-- Add more projects here -->
     </section>
 
     <footer>
